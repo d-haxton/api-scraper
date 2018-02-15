@@ -39,7 +39,6 @@ namespace Scraper.Scheduler
                 {
                     // if we were doing this for real we could just retry this with exponential back off
                     scrapeRequest.Status = EScrapeStatus.Failed;
-                    dataStore.UpdateRequest(scrapeRequest);
                 }
             }
             finally

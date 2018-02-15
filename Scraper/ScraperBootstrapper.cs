@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Nancy;
-using Nancy.Bootstrappers.StructureMap;
-using Scraper.Converters;
+﻿using Nancy.Bootstrappers.StructureMap;
 using Scraper.Scheduler;
 using Scraper.Structuremap;
 using StructureMap;
@@ -22,7 +15,6 @@ namespace Scraper
             DiagnosticsConfiguration.Password = "password";
 #endif
 
-            //Nancy.Json.JsonSettings.PrimitiveConverters.Add(new JsonConvertEnum());
         }
 
         protected override void ConfigureApplicationContainer(IContainer container)

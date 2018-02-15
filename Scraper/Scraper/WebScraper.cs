@@ -25,18 +25,17 @@ namespace Scraper.Scraper
     public class WebScraper : IWebScraper
     {
         private readonly IDataStore dataStore;
+        private readonly IHttpClientWrapper httpClient;
 
-        // don't dispose httpclient: https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/
-        private static readonly HttpClient Client = new HttpClient();
-
-        public WebScraper(IDataStore dataStore)
+        public WebScraper(IDataStore dataStore, IHttpClientWrapper httpClient)
         {
             this.dataStore = dataStore;
+            this.httpClient = httpClient;
         }
 
         public async Task<ScrapeResult> Scrape(ScrapeRequest request)
         {
-            var response = await Client.GetAsync(request.Url);
+            var response = await httpClient.Client.GetAsync(request.Url);
             response.EnsureSuccessStatusCode();
             using (var content = response.Content)
             {
@@ -44,7 +43,6 @@ namespace Scraper.Scraper
                 return BuildAndAddResult(stringResult, ref request);
             }
         }
-
 
         private ScrapeResult BuildAndAddResult(string text, ref ScrapeRequest request)
         {

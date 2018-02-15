@@ -58,14 +58,14 @@ namespace Scraper.Scheduler
             }
         }
 
-        private IJobDetail BuildScraperJobDetail(int jobCount)
+        private static IJobDetail BuildScraperJobDetail(int jobCount)
         {
             return JobBuilder.Create<ScraperJob>()
                 .WithIdentity($"scraperJob{jobCount}", "scraperGroup")
                 .Build();
         }
 
-        private ITrigger BuildScraperTrigger(int jobCount)
+        private static ITrigger BuildScraperTrigger(int jobCount)
         {
             return TriggerBuilder.Create()
                 .WithIdentity($"scraper{jobCount}Trigger", "scraperGroup")

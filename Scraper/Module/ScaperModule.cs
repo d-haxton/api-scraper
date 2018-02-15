@@ -1,9 +1,7 @@
-﻿using System.Linq;
-using Nancy;
+﻿using Nancy;
 using Newtonsoft.Json;
 using Scraper.Database;
 using Scraper.Model;
-using Scraper.Scheduler;
 using Scraper.Service;
 
 namespace Scraper.Module
