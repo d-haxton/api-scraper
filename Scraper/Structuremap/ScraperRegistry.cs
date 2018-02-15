@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Quartz;
-using Quartz.Impl;
-using Quartz.Spi;
+﻿using Quartz.Spi;
 using Scraper.Database;
 using Scraper.Scheduler;
 using Scraper.Scraper;

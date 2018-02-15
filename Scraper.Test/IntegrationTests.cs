@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nancy;
 using Nancy.Testing;
 using Newtonsoft.Json;
-using Scraper.Database;
 using Scraper.Model;
-using Scraper.Module;
-using Scraper.Service;
 
 namespace Scraper.Test
 {

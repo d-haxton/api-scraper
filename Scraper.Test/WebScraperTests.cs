@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Scraper.Database;
