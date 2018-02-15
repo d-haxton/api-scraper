@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
 namespace Scraper.Model
 {
     public enum EScrapeStatus
     {
+        [EnumMember(Value = "rejected")]
         Rejected,
+
+        [EnumMember(Value = "accepted")]
         Accepted,
-        Awaiting,
-        Scrapping,
+
+        [EnumMember(Value = "scraping")]
+        Scraping,
+
+        [EnumMember(Value = "completed")]
         Completed,
+
+        [EnumMember(Value = "failed")]
         Failed,
     }
 }
